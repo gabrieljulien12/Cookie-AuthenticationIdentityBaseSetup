@@ -1,0 +1,26 @@
+﻿@model UserSignInRequestModel
+
+<form asp-controller="Auth" asp-action="SıgIn" method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+    <div class="mb-3">
+        <label>UserName</label>
+        <span class="text-danger" asp-validation-for="UserName"></span>
+        <input asp-for="UserName"class="form-control" />
+
+    </div>
+    <div class="mb-3">
+        <label>Password</label>
+        <span class="text-danger" asp-validation-for="Password"></span>
+        <input asp-for="Password " class="form-control" />
+    </div>
+    <div class="mb-3">
+        <input type="checkbox" asp-for="RememberMe" class="forn-check-input" />
+       <label>Remember Me</label>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary">Join</button>
+    </div>
+    <div mb-3 asp-validation-summary="ModelOnly">
+
+    </div>
+</form>

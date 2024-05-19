@@ -1,0 +1,29 @@
+﻿@model UserRegisterRequestModel
+
+<form asp-controller="Auth" asp-action="Register" method="post">
+        <div class="mb-3">
+            <label>UserName</label>
+            <span class="text-danger" asp-validation-for="UserName"></span>
+            <input asp-for="UserName" class="form-control" />
+        </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <span class="text-danger" asp-validation-for="Email"></span>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Password</label>
+        <span class="text-danger" asp-validation-for="Password"></span>
+        <input asp-for="Password" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>ConfirmPassword</label>
+        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+        <input asp-for="ConfirmPassword" class="form-control" />
+    </div>
+    
+    <div class="mb-3">
+        <button class="btn btn-primary">add to user</button>
+    </div>
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+</form>
